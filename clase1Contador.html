@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Desafio Clase 1- Contador</h2>
+
+    <script>
+    class Contador {
+        constructor(responsable) {
+         this.responsable = responsable;
+         this.contador = 0;
+        }
+        static globalCount = 0;
+    }
+
+    this.obtenerResponsable = ()=>{return this.responsable}
+    this.obtenerCuentaIndividual = ()=>{return this.contador}
+    this.obtenerCuentaGlobal = ()=>{return globalCount}
+    this.contar = (i)=>{
+     this.contador += i;
+     Contador.globalCount += i;
+    }
+
+    //Responsables
+    let lara = new Contador("Lara");
+    lara.contador(2)
+    lara.contador(6)
+
+    let agustina = new Contador("Agustina");
+    agustina.contador(4)
+    agustina.contador(8)
+
+    console.log(
+     lara.obtenerResponsable(), 
+     lara.obtenerCuentaIndividual(), 
+     agustina.obtenerResponsable(), 
+     agustina.obtenerCuentaIndividual(), ": ",
+     Contador.obtenerCuentaGlobal()
+    )
+    </script>
+
+</body>
+</html>
